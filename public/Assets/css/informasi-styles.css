@@ -1,0 +1,112 @@
+/* AplikasiWebKripto/public/Assets/css/informasi-styles.css */
+
+:root {
+    --content-heading-info: #485542; 
+    --card-bg-info: #ffffff;
+    --card-border-info: #e0e0e0;
+    --text-color-info: #333333;
+    --link-color-info: #52604F; 
+}
+
+.about-content {
+    padding: 10px 0; 
+}
+
+.about-card {
+    background-color: var(--card-bg-info);
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    border: 1px solid var(--card-border-info);
+}
+
+.about-card .cardHeader {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--card-border-info);
+}
+
+.about-card .cardHeader h2 {
+    color: var(--content-heading); 
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.company-logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.company-logo {
+    max-width: 250px; 
+    height: auto;
+    border-radius: 6px; 
+    padding: 10px;
+}
+
+.about-section {
+    margin-bottom: 25px;
+    color: var(--text-color-info);
+}
+
+.about-section:last-child {
+    margin-bottom: 0;
+}
+
+.about-section h3 {
+    color: var(--content-heading-info);
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.about-section p,
+.about-section ul {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.about-section li {
+    margin-bottom: 8px;
+}
+
+.about-section a {
+    color: var(--link-color-info);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+    color: #3E4B3A;
+}
+
+/* Responsive untuk about card jika perlu */
+@media (max-width: 768px) {
+    .about-card {
+        padding: 20px;
+    }
+    .about-card .cardHeader h2 {
+        font-size: 20px;
+    }
+    .company-logo {
+        max-width: 200px;
+    }
+    .about-section h3 {
+        font-size: 18px;
+    }
+    .about-section p,
+    .about-section ul {
+        font-size: 15px;
+    }
+}

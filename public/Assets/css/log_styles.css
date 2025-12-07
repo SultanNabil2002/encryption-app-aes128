@@ -1,0 +1,190 @@
+/* AplikasiWebKripto/public/Assets/css/log_styles.css */
+/* Styling khusus untuk halaman Log Aktivitas */
+
+/* Styling untuk Area Filter Log */
+.log-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid var(--card-border, #e0e0e0); /* Menggunakan variabel dari CSS utama atau fallback */
+}
+
+.log-filters .filter-input,
+.log-filters .filter-select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    flex-grow: 1;
+    min-width: 180px;
+    height: 36px; 
+    box-sizing: border-box;
+}
+
+.log-filters .filter-select {
+    cursor: pointer;
+}
+
+.log-filters .btn-filter-log {
+    padding: 8px 18px;
+    font-size: 14px;
+    background-color: var(--content-heading, #52604F); /* Warna dari tema Hutan Pinus */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+.log-filters .btn-filter-log:hover {
+    background-color: #3E4B3A; /* Warna lebih gelap saat hover */
+}
+
+.btn-filter-reset { /* Tombol untuk reset filter */
+    padding: 8px 18px;
+    font-size: 14px;
+    background-color: #52604F; 
+    color: #fff !important;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; 
+    display: inline-block; 
+    line-height: normal; 
+    vertical-align: middle; /* Sejajarkan dengan tombol dan input */
+    height: 36px;
+    box-sizing: border-box;
+}
+.btn-filter-reset:hover {
+    background-color: #3E4B3A;
+    text-decoration: none !important;
+}
+
+
+/* Styling untuk Tabel Log */
+.table-responsive-log {
+    width: 100%;
+    overflow-x: auto; /* Scroll horizontal untuk tabel di layar kecil */
+    margin-top: 10px;
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: var(--content-text, #333);
+}
+
+.log-table th,
+.log-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--card-border, #e0e0e0);
+    vertical-align: middle;
+}
+
+.log-table thead th {
+    background-color: #f1f3f5;
+    font-weight: 500;
+    color: var(--content-heading, #52604F);
+    white-space: nowrap;
+}
+
+.log-table tbody tr:nth-child(even) {
+    background-color: #f9fafb; /* Zebra striping */
+}
+
+.log-table tbody tr:hover {
+    background-color: #eef2f7;
+}
+
+/* Styling untuk Tipe Aksi Log */
+.log-action-type {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #fff; /* Default warna teks putih */
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+/* Warna spesifik untuk tipe aksi */
+.log-action-type.login_success,
+.log-action-type.password_change_success,
+.log-action-type.file_encrypt,
+.log-action-type.user_create_public,
+.log-action-type.user_create_admin {
+    background-color: #28a745; /* Hijau untuk sukses/pembuatan */
+}
+
+.log-action-type.login_fail,
+.log-action-type.password_change_fail,
+.log-action-type.file_delete,
+.log-action-type.user_delete_admin {
+    background-color: #dc3545; /* Merah untuk gagal/hapus */
+}
+
+.log-action-type.logout,
+.log-action-type.file_decrypt,
+.log-action-type.view_activity_log,
+.log-action-type.user_role_change {
+    background-color: #17a2b8; /* Biru untuk info/netral */
+}
+
+/* Fallback warna tipe aksi jika tidak ada kelas spesifik */
+.log-action-type {
+    background-color: #6c757d; /* Abu-abu untuk default */
+}
+
+
+/* Styling untuk Pagination */
+.pagination {
+    margin-top: 25px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--card-border, #e0e0e0);
+}
+
+.pagination a, 
+.pagination span.active {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--link-color, #788A74); /* Menggunakan variabel dari tema utama */
+    background-color: #fff;
+    line-height: 1.4; /* Menjaga konsistensi tinggi */
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+    color: var(--link-hover-color, #52604F); /* Menggunakan variabel dari tema utama */
+}
+
+.pagination span.active {
+    background-color: var(--content-heading, #52604F); 
+    color: #fff;
+    border-color: var(--content-heading, #52604F);
+    font-weight: bold;
+    cursor: default;
+}
+
+.pagination .page-info {
+    display: block;
+    margin-top: 10px;
+    color: #6c757d;
+    font-size: 0.9em;
+}

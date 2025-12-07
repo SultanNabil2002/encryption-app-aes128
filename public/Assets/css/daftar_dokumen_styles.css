@@ -1,0 +1,233 @@
+.search-results-info {
+    font-size: 15px;
+    color: var(--content-text, #555);
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+.search-results-info strong {
+    color: var(--content-heading, #52604F);
+}
+
+.table-responsive-docs {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+    border: 1px solid var(--card-border, #e0e0e0);
+    border-radius: 6px;
+}
+
+.document-table {
+    width: 100%;
+    min-width: 1200px;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: var(--content-text, #333);
+}
+
+.document-table th,
+.document-table td {
+    padding: 10px 12px;
+    text-align: center; /* Rata tengah untuk semua sel */
+    border-bottom: 1px solid var(--card-border, #e0e0e0);
+    vertical-align: middle; /* Konten sel ditengahkan vertikal */
+}
+
+.document-table thead th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    color: var(--content-heading, #52604F);
+    white-space: nowrap;
+    border-top: none;
+    border-bottom-width: 2px;
+}
+
+.document-table tbody tr:nth-child(even) {
+    background-color: #fcfdff;
+}
+
+.document-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.filename-meta-enc,
+.filename-meta-dec {
+    display: block;
+    font-size: 0.8em;
+    color: #6c757d;
+    margin-top: 3px;
+    word-break: break-all;
+}
+
+.description-cell {
+    min-width: 150px; 
+    max-width: 250px; 
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left; /* Deskripsi mungkin lebih baik rata kiri */
+}
+
+.doc-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+}
+
+.doc-status.terenkripsi {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.doc-status.terdekripsi {
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    color: #0f5132;
+}
+
+.document-table td.actions-cell {
+    white-space: nowrap;
+    text-align: center; /* Tombol aksi juga rata tengah */
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 3px 2px;
+    transition: opacity 0.2s ease;
+}
+.btn-action:hover {
+    opacity: 0.8;
+}
+
+.btn-download-enc {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.btn-download-dec-stored { /* Tombol baru untuk unduh nama server */
+    background-color: #17a2b8; 
+    color: white;
+    border-color: #17a2b8;
+}
+.btn-download-dec-original { /* Tombol untuk unduh nama asli */
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+.btn-decrypt {
+    background-color: #ffc107;
+    color: #212529;
+    border-color: #ffc107;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.pagination {
+    margin-top: 25px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--card-border, #e0e0e0);
+}
+.pagination a, .pagination span.active {
+    display: inline-block; padding: 6px 12px; margin: 0 3px;
+    border: 1px solid #ccc; border-radius: 4px; text-decoration: none;
+    color: var(--link-color, #788A74); background-color: #fff; line-height: 1.4;
+}
+.pagination a:hover {
+    background-color: #f0f0f0; border-color: #bbb; color: var(--link-hover-color, #52604F);
+}
+.pagination span.active {
+    background-color: var(--content-heading, #52604F); color: #fff;
+    border-color: var(--content-heading, #52604F); font-weight: bold; cursor: default;
+}
+.pagination .page-info {
+    display: block; margin-top: 10px; color: #6c757d; font-size: 0.9em;
+}
+
+
+@media (max-width: 992px) {
+    .table-responsive-docs {
+        border: none;
+        overflow-x: visible;
+    }
+    .document-table thead {
+        display: none;
+    }
+    .document-table, 
+    .document-table tbody, 
+    .document-table tr, 
+    .document-table td {
+        display: block;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    .document-table tr {
+        margin-bottom: 20px;
+        border: 1px solid var(--card-border, #e0e0e0);
+        border-radius: 6px;
+        padding: 10px; /* Padding dalam untuk setiap kartu */
+        background-color: var(--card-bg, #fff);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .document-table td {
+        text-align: center; /* Nilai data rata tengah */
+        padding-left: 10px; /* Hapus padding kiri yang besar */
+        padding-right: 10px;
+        position: relative;
+        border-bottom: none; /* Hapus border bawah antar sel di mode card */
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .document-table tr td:not(:last-child) { /* Beri pemisah antar "field" di kartu */
+        border-bottom: 1px dotted #eee; 
+        margin-bottom: 5px; /* Jarak antar field di kartu */
+        padding-bottom: 10px;
+    }
+
+    .document-table td::before {
+        content: attr(data-label);
+        display: block; /* Label di atas nilai */
+        font-weight: bold;
+        text-align: center; /* Label juga rata tengah */
+        margin-bottom: 4px;
+        color: var(--content-heading, #52604F);
+        font-size: 0.9em;
+        text-transform: capitalize;
+        position: static; /* Tidak perlu absolute lagi */
+        width: auto;
+        padding-right: 0;
+    }
+    .document-table td.description-cell {
+        text-align: center; /* Deskripsi juga rata tengah di mode card */
+        white-space: normal; /* Izinkan wrap */
+    }
+    .document-table td.actions-cell {
+        text-align: center; /* Tombol aksi rata tengah */
+        padding-top: 10px; /* Beri jarak atas untuk tombol aksi */
+    }
+    .btn-action {
+        display: inline-block;
+        margin: 5px; /* Margin antar tombol aksi */
+        width: auto;
+    }
+}

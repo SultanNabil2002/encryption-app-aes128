@@ -1,0 +1,236 @@
+
+/* Styling untuk Form Dekripsi */
+.form-decrypt {
+    margin-top: 20px;
+}
+
+.form-decrypt .form-group {
+    margin-bottom: 20px;
+}
+
+.form-decrypt label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--content-heading, #52604F);
+}
+
+.form-decrypt input[type="number"],
+.form-decrypt input[type="password"] {
+    width: 100%; /* Input mengambil lebar penuh dalam kolomnya */
+    max-width: 350px; /* Batasi lebar maksimal input agar tidak terlalu panjang */
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #495057;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+/* Input ID Dokumen bisa dibuat lebih pendek jika diinginkan */
+.form-decrypt input#document_id_to_decrypt {
+    max-width: 250px;
+}
+
+
+.form-decrypt input[type="number"]:focus,
+.form-decrypt input[type="password"]:focus {
+    border-color: var(--sidebar-active-border, #A0BCA4);
+    box-shadow: 0 0 0 0.2rem rgba(143, 188, 143, 0.25);
+    outline: none;
+}
+
+.form-decrypt .form-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+.btn-submit-decrypt {
+    background-color: #52604F;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit-decrypt:hover {
+    background-color: #8FBC8F; /* DarkSeaGreen saat hover */
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Styling Pesan Feedback (mirip enkripsi_styles.css, bisa diglobalisasi) */
+.message.success-message {
+    background-color: #e6f0e6;
+    color: var(--content-heading, #52604F);
+    border: 1px solid var(--sidebar-active-border, #A0BCA4);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.message.success-message h4 { margin-top: 0; margin-bottom: 10px; color: var(--content-heading, #52604F); }
+.message.success-message p { margin-bottom: 5px; font-size: 14px; line-height: 1.6; }
+.message.success-message p code { background-color: #e9ecef; padding: 2px 4px; border-radius: 3px; font-size: 0.9em;}
+.message.success-message p strong { font-weight: 500; }
+
+.btn-link-to-list { /* Tombol link di pesan sukses */
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--topbar-bg, #4A5444);
+    color: var(--topbar-text, #EAEAEA) !important; /* Pastikan warna teks kontras */
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+.btn-link-to-list:hover { background-color: #3E4B3A; color: #fff !important; }
+
+.message.error-message {
+    background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;
+    padding: 15px; border-radius: 5px; margin-bottom: 20px;
+}
+.message.error-message h4 { margin-top: 0; margin-bottom: 10px;}
+.message.error-message p { margin-bottom: 5px; font-size: 14px; line-height: 1.6; }
+
+
+/* Styling untuk Tabel Daftar Dokumen Terenkripsi di Halaman Dekripsi */
+
+.table-responsive-docs { /* Wrapper tabel */
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px; /* Jarak dari form dekripsi */
+    border: 1px solid var(--card-border, #e0e0e0);
+    border-radius: 6px;
+}
+
+.document-table { /* Kelas tabel yang sama */
+    width: 100%;
+    min-width: 600px; /* Lebar minimal untuk tabel ini (lebih sedikit kolom) */
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.document-table th,
+.document-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--card-border, #e0e0e0);
+    vertical-align: top;
+}
+
+.document-table thead th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    color: var(--content-heading, #52604F);
+    white-space: nowrap;
+    border-bottom-width: 2px;
+}
+
+.document-table tbody tr:nth-child(even) { background-color: #fcfdff; }
+.document-table tbody tr:hover { background-color: #f1f5f9; }
+
+/* Tombol "Pilih Ini" di dalam tabel */
+.btn-select-doc {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-select-doc:hover {
+    background-color: #31b0d5; /* Sedikit lebih gelap */
+}
+
+/* Pagination (Gaya pagination sudah ada di dashboard_styles.css jika sudah dimerge dari log_styles.css) */
+/* Jika belum, Anda bisa copy-paste gaya .pagination dari log_styles.css atau daftar_dokumen_styles.css ke sini atau ke dashboard_styles.css */
+.pagination {
+    margin-top: 25px; padding-top: 15px; text-align: center; font-size: 14px;
+    border-top: 1px solid var(--card-border, #e0e0e0);
+}
+.pagination a, .pagination span.active {
+    display: inline-block; padding: 6px 12px; margin: 0 3px;
+    border: 1px solid #ccc; border-radius: 4px; text-decoration: none;
+    color: var(--link-color, #788A74); background-color: #fff; line-height: 1.4;
+}
+.pagination a:hover {
+    background-color: #f0f0f0; border-color: #bbb; color: var(--link-hover-color, #52604F);
+}
+.pagination span.active {
+    background-color: var(--content-heading, #52604F); color: #fff;
+    border-color: var(--content-heading, #52604F); font-weight: bold; cursor: default;
+}
+.pagination .page-info {
+    display: block; margin-top: 10px; color: #6c757d; font-size: 0.9em;
+}
+
+/* Responsive Card View untuk Tabel Dokumen di Halaman Dekripsi */
+@media (max-width: 768px) {
+    .table-responsive-docs {
+        border: none;
+        overflow-x: visible;
+    }
+    .document-table thead {
+        display: none;
+    }
+    .document-table, 
+    .document-table tbody, 
+    .document-table tr, 
+    .document-table td {
+        display: block;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    .document-table tr {
+        margin-bottom: 15px; 
+        border: 1px solid var(--card-border, #e0e0e0);
+        border-radius: 6px;
+        padding: 15px;
+        background-color: var(--card-bg, #fff);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .document-table td {
+        text-align: right;
+        padding-left: 40%; 
+        position: relative;
+        border-bottom: 1px dotted #eee;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .document-table td:last-child {
+        border-bottom: none;
+    }
+    .document-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: calc(40% - 20px); 
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+        white-space: nowrap;
+        color: var(--content-heading, #52604F);
+        font-size: 0.9em; 
+    }
+    .document-table td[data-label="Pilih"] {
+        padding-left: 15px; 
+        text-align: left;
+    }
+    .document-table td[data-label="Pilih"]::before {
+        display: none; 
+    }
+    .btn-select-doc {
+        width: 100%; 
+    }
+}

@@ -1,0 +1,273 @@
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #788A74 0%, #52604F 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333; /* Teks utama (gelap) untuk kontras dengan container putih */
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff; 
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.logo-container {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    border-right: 1px solid #dee2e6;
+    min-height: 200px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.form-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    min-width: 0;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 { /* Judul Registrasi */
+    text-align: center;
+    color: #5A746D;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057; 
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da; 
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #495057; /* Warna teks input */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #9FB3AD; 
+    box-shadow: 0 0 0 0.2rem rgba(107, 142, 132, 0.25); 
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #495057; 
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 8px;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #adb5bd;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    top: -1px;
+}
+
+.radio-label input[type="radio"]:checked {
+    border-color: #6B8E84; 
+}
+
+.radio-label input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #6B8E84; 
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-submit {
+    background-color: #6B8E84; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.07); 
+}
+
+.btn-submit:hover {
+    background-color: #5A746D; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.message {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.errors {
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb;
+}
+
+.errors ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.success {
+    background-color: #d1e7dd; 
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+.success a {
+    color: #0a3622; 
+    font-weight: bold;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.login-link a {
+    color: #6B8E84; 
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+    color: #5A746D; 
+}
+
+/* --- Media Queries (Penyesuaian untuk Layar Lebih Kecil) --- */
+
+/* Untuk Tablet dan Mobile Besar (Portrait) */
+@media (max-width: 800px) {
+    .page-container {
+        flex-direction: column;
+        padding: 25px;
+        max-width: 500px;
+    }
+
+    .logo-container {
+        flex-basis: auto;
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 25px;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 25px;
+        min-height: auto;
+    }
+
+    .logo-container img {
+        max-height: 150px;
+    }
+
+    .form-wrapper {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .form-container{
+        max-width: none;
+    }
+}
+
+/* Untuk Mobile Kecil */
+@media (max-width: 480px) {
+    .page-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .logo-container img {
+        max-height: 120px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    .btn-submit {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .radio-label {
+        font-size: 14px;
+    }
+}

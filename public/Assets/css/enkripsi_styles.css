@@ -1,0 +1,140 @@
+
+.form-encrypt {
+    margin-top: 20px;
+}
+
+.form-encrypt .form-group {
+    margin-bottom: 20px; /* Jarak antar grup form lebih besar */
+}
+
+.form-encrypt label {
+    display: block;
+    margin-bottom: 8px; /* Jarak label ke input */
+    font-weight: 500;
+    font-size: 15px; /* Ukuran font label sedikit lebih besar */
+    color: var(--content-heading, #52604F); /* Warna label serasi dengan heading */
+}
+
+.form-encrypt input[type="file"],
+.form-encrypt input[type="password"],
+.form-encrypt textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #495057;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-encrypt input[type="file"] {
+    padding: 8px 10px; /* Sedikit penyesuaian padding untuk input file */
+}
+
+.form-encrypt textarea {
+    min-height: 80px; /* Tinggi minimal textarea */
+    resize: vertical; /* Hanya izinkan resize vertikal */
+}
+
+.form-encrypt input[type="file"]:focus,
+.form-encrypt input[type="password"]:focus,
+.form-encrypt textarea:focus {
+    border-color: var(--sidebar-active-border, #A0BCA4); /* Warna border fokus dari tema */
+    box-shadow: 0 0 0 0.2rem rgba(143, 188, 143, 0.25); /* Shadow fokus dari tema (DarkSeaGreen based) */
+    outline: none;
+}
+
+.form-encrypt .form-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #6c757d; /* Warna abu-abu untuk teks bantuan */
+}
+
+.btn-submit-encrypt {
+    background-color: #52604F; /* Warna sage dari tema untuk tombol utama */
+    color: #fff !important; /* Teks gelap agar kontras di atas sage */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit-encrypt:hover {
+    background-color: #8FBC8F; /* DarkSeaGreen saat hover */
+    color: #fff; /* Teks putih saat hover */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.message.success-message p > .btn-link-to-list {
+    /* Jika ingin margin atas spesifik saat di dalam <p> ini */
+    margin-top: 10px; 
+}
+
+/* Styling untuk pesan feedback */
+/* Pesan sukses dan error bisa mengambil gaya dari CSS utama dashboard jika sudah ada, 
+   atau bisa disesuaikan di sini jika perlu gaya yang berbeda. */
+
+.message.success-message {
+    background-color: #e6f0e6; /* Latar hijau sangat lembut */
+    color: var(--content-heading, #52604F); /* Teks gelap */
+    border: 1px solid var(--sidebar-active-border, #A0BCA4); /* Border sage */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.message.success-message h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--content-heading, #52604F);
+}
+.message.success-message p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.message.success-message p strong {
+    font-weight: 500;
+}
+
+.btn-link-to-list {
+    display: inline-block;
+    padding: 9px 16px; 
+    background-color: var(--topbar-bg, #4A5444); 
+    color: #FFFFFF !important; 
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500; 
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border: 1px solid var(--topbar-bg, #4A5444);
+}
+
+.btn-link-to-list:hover {
+    background-color: var(--sidebar-bg, #3E4B3A);
+    border-color: var(--sidebar-bg, #3E4B3A);
+    color: #FFFFFF !important; 
+}
+
+.message.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.message.error-message h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.message.error-message p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+}
