@@ -44,17 +44,7 @@ Pastikan Anda telah menginstal **XAMPP** atau server lokal sejenis yang mendukun
    `db_kripto_web`
 3. Import file `database.sql` yang tersedia di dalam folder repository ini ke dalam database tersebut.
 
-### 3. Konfigurasi Koneksi
-Buka file konfigurasi database (biasanya di `config/koneksi.php` atau `config.php`) dan sesuaikan pengaturan berikut jika diperlukan:
-```php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "db_kripto_web";
-
-* **Integritas:** Memastikan file hasil dekripsi kembali ke format aslinya tanpa kerusakan data.
-## gambaran aplikasi
-## 📸 Screenshots
+### 📸 Screenshots
 ![Screenshot 1](https://github.com/user-attachments/assets/b3bc2e94-156f-49da-bf9b-85e29d0c7195)
 ![Screenshot 2](https://github.com/user-attachments/assets/9f55c93b-d8a2-424b-a81e-217fdc162a69)
 ![Screenshot 3](https://github.com/user-attachments/assets/610e51db-0dbd-4a61-9353-7b04abb539d9)
