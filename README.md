@@ -52,6 +52,7 @@ $user = "root";
 $pass = "";
 $db   = "db_kripto_web";
 
+
 ## 📸 Screenshots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b3bc2e94-156f-49da-bf9b-85e29d0c7195" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9f55c93b-d8a2-424b-a81e-217fdc162a69" />
@@ -61,3 +62,4 @@ $db   = "db_kripto_web";
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/058ff287-c95b-4eab-bc07-e8393c79b273" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/641fb27f-4124-4c03-8e3a-ffcca927281b" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/719bf2c0-8b46-4c7f-a6aa-99bb2f3a41c2" />
+
